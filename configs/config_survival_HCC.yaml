@@ -1,0 +1,79 @@
+# mandatory parameters
+metadata_dir: /home/creyna/Vogl-lab_Projects_git/HCC/Data/Survival/Metadata
+data_dir: /home/creyna/Vogl-lab_Projects_git/HCC/Data/Survival/Data
+lib_meta_data: combined_libraries_with_lineages_important_info_nonAAseq.pkl
+project: HCC_MUW
+group_tests:
+  - censored
+  - deceased
+
+###
+# filter metadata (optional if not all samples are needed)
+filters_metadata:
+  treatment: ICI
+# Optional parameters with defaults
+meta_typefile: excel
+col_sample_name: SampleName
+col_target: "OS Status"
+col_predict: class1_proba
+random_state: 420
+
+# Features and thresholds
+extra_features_to_include:
+  - "OS months"
+data_types:
+  - exist
+
+# Parameter grid for hyperparameter tuning
+param_grid:
+  preprocessor__peptides__feature_selection__estimator__l1_ratio:
+    type: real
+    low: 0.2
+    high: 0.8
+    prior: uniform
+
+  preprocessor__peptides__feature_selection__estimator__alpha_min_ratio:
+    type: real
+    low: 0.005
+    high: 0.1
+    prior: log-uniform
+
+  preprocessor__peptides__feature_selection__estimator__n_alphas:
+    type: integer
+    low: 50
+    high: 200
+
+  estimator__learning_rate:
+    type: real
+    low: 0.01
+    high: 0.3
+    prior: log-uniform
+
+  estimator__max_depth:
+    type: integer
+    low: 3
+    high: 10
+
+  estimator__subsample:
+    type: real
+    low: 0.6
+    high: 1.0
+    prior: uniform
+
+  estimator__colsample_bytree:
+    type: real
+    low: 0.6
+    high: 1.0
+    prior: uniform
+
+  estimator__reg_lambda:
+    type: real
+    low: 0.01
+    high: 10.0
+    prior: log-uniform
+
+  estimator__n_estimators:
+    type: integer
+    low: 50
+    high: 500
+

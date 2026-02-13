@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+
+# Environments
+.env
+.venv
+env/
+venv/
+conda_envs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data / models
+data/
+outputs/
+models/
+*.joblib
+*.parquet
+
+# Logs
+*.log
+
+# OS
+.DS_Store
