@@ -36,7 +36,7 @@ echo "Using seed: ${seed}"
 # -------------------------
 # Run Python module
 # -------------------------
-python -m survival.cli.main_survival_trainTest \
+python -m phipsurv.cli.train_test \
                                   --seed $seed \
                                   --config $CONFIG_FILE \
                                   --run_nested_cv True  \

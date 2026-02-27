@@ -31,14 +31,14 @@ survival_project/
 ├── src/
 │   └── survival/
 │       ├── cli/
-│       │   └── main_survival_trainTest.py
+│       │   └── train_test.py
 │       ├── io/
-│       │   └── dataHandler.py
-│       ├── ml/
-│       │   └── ML_survival_helpers.py
+│       │   └── data_handler.py
+│       ├── survival/
+│       │   └── helpers.py
 │       ├── plots/
-│       │   ├── metricsPlots_survival_helpers.py
-│       │   └── plots_helpers.py
+│       │   ├── metrics_helpers.py
+│       │   └── helpers.py
 │       └── utils/
 │           └── peptides_filter.py
 │

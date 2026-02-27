@@ -40,7 +40,10 @@ from sksurv.metrics import cumulative_dynamic_auc
 from sksurv.util import Surv
 from tqdm import tqdm
 
-from survival.ml.ML_survival_helpers import calculate_cumulative_dynamic_auc
+# ======================
+# Local / project imports
+# ======================
+from phipsurv.survival.helpers import calculate_cumulative_dynamic_auc
 
 # ======================
 # Global configuration

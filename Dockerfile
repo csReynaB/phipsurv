@@ -19,4 +19,4 @@ RUN micromamba run -n ml python -m pip install -U pip setuptools wheel \
 #CMD ["micromamba", "run", "-n", "ml", "python", "-c", "import survival; print('ok')"]
 #CMD ["micromamba", "run", "-n", "ml", "survival-trainTest", "--help"]
 ENTRYPOINT ["micromamba", "run", "-n", "ml"]
-CMD ["survival-trainTest", "--help"]
+CMD ["train_test", "--help"]

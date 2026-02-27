@@ -10,8 +10,8 @@ where = ["src"]
 # Project metadata (informational unless you pip install -e .)
 # ---------------------------------------------------------------------
 [project]
-name = "survival"
-version = "0.1.0"
+name = "phipsurv"
+version = "1.0"
 description = "Survival analysis and ML pipelines using XGBoost, SHAP, and scikit-survival"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -56,7 +56,7 @@ dependencies = [
 # Or install via conda-forge separately
 # ---------------------------------------------------------------------
 [project.scripts]
-survival-trainTest = "survival.cli.main_survival_trainTest:main"
+train_test = "phipsurv.cli.train_test:main"
 
 [project.optional-dependencies]
 dev = [
@@ -79,7 +79,7 @@ target-version = ["py310"]
 [tool.isort]
 profile = "black"
 line_length = 88
-known_first_party = ["survival"]
+known_first_party = ["phipsurv"]
 combine_as_imports = true
 
 # ---------------------------------------------------------------------

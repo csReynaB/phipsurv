@@ -23,10 +23,10 @@ from skopt.space import Categorical, Integer, Real
 # ======================
 # Local / project imports
 # ======================
-from survival.utils.peptidesFilter import (
+from phipsurv.utils.peptides_filter import (
     CorrelationFilter,
     EntropyFilter,
-    PrevalenceFilter,
+    PrevalenceFilter
 )
 
 # ======================
